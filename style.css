@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;0,800;1,400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --body-color:#121212;
+    --red-color:#f72929ea;
+    --yellow-color:#3b3b3b;
+    --color-primary:#1b1b1b;
+   --box-shadow: 0 0 .5rem rgba(119, 118, 118, 0.281);
+   --text-color:#acacac;
+}
+input{
+    color: white;
+    font-weight: 400;
+}
+body{
+    background-color: var(--body-color);
+}
+button{
+    cursor: pointer;
+}
+html,button{
+    font-family: 62.5%;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+    text-transform: capitalize;
+}
+.center .error-box{
+    color: var(--red-color);
+    margin: 0.7rem;
+    
+    margin-top: -.5rem !important;
+    margin-left: 0.7rem;
+    height: 1.5rem;
+}
+.center .error{
+    font-weight: 600;
+    font-size: .7rem;
+}
+
+.center .container-head{
+    display: flex;
+    justify-content: center;
+    background-color: var(--yellow-color);
+    margin: .5rem;
+    border-radius: .2rem;
+
+}
+.center .container-head h2{
+    font-size: .9rem;
+    font-weight: 500;
+    padding: .2rem;
+    color: var(--text-color);
+    font-weight: 400;
+    letter-spacing: .1rem;
+}
+.center .contianer{
+    background-color: var(--color-primary);
+    max-width: 30rem;
+    width: 100%;
+/* box-shadow: var(--box-shadow); */
+border-radius: .3rem;
+height: 35rem !important;
+height: 100%;
+
+}
+.center .contianer .getInpt{
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    margin: 0.3rem;
+    margin-top: 0.5rem;
+}
+.center .contianer .getInpt input{
+    height: 2rem;
+    /* background-color: transparent; */
+    width: 13rem;
+    outline: none;
+    padding: .4rem;
+    border: 1px solid #3b3b3b;
+    border-radius: .2rem;
+    /* box-shadow: 0 0 .2rem  rgba(119, 118, 118, 0.281); */
+    background-color: transparent;
+    margin-left: 0.4rem;
+    transition: .3s;
+}
+.center .contianer .getInpt input:focus{
+    border-bottom: 1px solid var(--yellow-color);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.center .contianer .getInpt .input-btn{
+    display: flex;
+    margin-left: .6rem;
+}
+.center .contianer .getInpt .input-btn .btn{
+    margin-left: .2rem;
+    padding: .8rem .7rem;
+    border: 1px solid #3b3b3b;
+    height: 1.9rem;
+    color: var(--text-color);
+    font-weight: 500;
+    border-radius: .2rem;
+    /* box-shadow: 0 0 .3rem  rgba(119, 118, 118, 0.281); */
+    display: flex;
+    align-items: center;
+    transition: .3s;
+    background-color: transparent;
+}
+.btn i{
+    padding-right: .1rem;
+}
+.green{
+    color: dodgerblue !important;
+}
+.red{
+    color: rgb(228, 77, 89) !important;
+}
+.green:hover{
+    background-color: var(--yellow-color);
+    color: #f5f3f3;
+}
+.red:hover{
+    background-color: var(--red-color);
+    color: #f5f3f3 !important;
+}
+.center .task-list{
+    height: 24rem;
+    overflow-y: scroll;
+    margin: 0.3rem;
+    border-radius: .2rem;
+    color: white;
+}
+.center .task-list::-webkit-scrollbar{
+    width: .3rem;
+}
+.center .task-list::-webkit-scrollbar-track{
+    background-color:transparent;
+    background-clip: content-box !important;
+}
+.center .task-list::-webkit-scrollbar-thumb{
+    background-color: rgb(214, 214, 214);
+    border-radius: 1rem;
+    background-clip: content-box ;
+}
+.center .task-list .task-ul{
+    padding: .1rem;
+    text-transform: none;
+}
+.center .task-list .task-ul .mian-li{
+    display: flex;
+    align-items: center;
+}
+.center .task-list .task-ul .mian-li .task-li{
+    max-width: 70%;
+    width: 100%;
+}
+.center .task-list .task-ul .mian-li .li-btn{
+    max-width: 29%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.center .task-list .task-ul .mian-li .li-btn .btn:nth-child(1){
+    margin-bottom: 0.3rem;
+}
+.center .task-list .task-ul .mian-li .li-btn .btn{
+    padding: .2rem .7rem;
+    border: transparent;
+    height: 1.9rem;
+    color: var(--text-color);
+    font-weight: 500;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 .3rem  rgba(119, 118, 118, 0.281);
+    text-align: center;
+    transition: .3s;
+    width: 90%;
+}
+.task-li textarea{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    resize: none;
+    color: white;
+    min-height: 6rem;
+
+}
+.taskNo{
+    text-transform: capitalize;
+    color: #04bbac;
+}
+.task-li textarea::-webkit-scrollbar{
+    width: .5rem;
+}
+.center .task-list .task-ul .mian-li{
+    margin-top: 1rem;
+    margin: .3rem;
+    min-height: 2.2rem;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: .2rem;
+    padding: .5rem .5rem;
+    font-size: .8rem;
+    box-shadow: 0 0 .2rem  rgba(119, 118, 118, 0.281);
+
+}
+.getDatainnerValue{
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+.getDatainnerValue:not(:read-only){
+    color: var(--text-color);
+}
+/* .center .task-list .task-ul .task-li .li-btn{
+    width: 15rem;
+    justify-content: flex-end;
+    display: flex;
+    flex-wrap: nowrap;
+} */
+@media only screen and (max-width:31.5em){
+    .center .task-list::-webkit-scrollbar{
+       display: none;
+    }
+    .contianer{
+        margin: 0 .3rem;
+    }
+    .getInpt{
+        flex-direction: column;
+    }
+    .getInpt input{
+        width: 98% !important;
+        margin-bottom: 0.5rem;  
+    }
+    .second-header{
+        margin-top: 2rem !important;
+    }
+    .getInpt button{
+        /* max-width: 12rem !important; */
+        display: flex;
+        justify-content: center;
+
+    }
+    .li-btn button{
+        min-height: 2rem;
+        height: 100%;
+        font-size: .6rem;
+    }
+    
+}
