@@ -27,42 +27,37 @@ addTaskBTn.addEventListener('click',()=>{
         li = `<div class="mian-li">
         <li class="task-li">
         <span class="taskNo"></span>
-        <textarea id="getData" placeholder="My Task" readonly>${GetTask.value}</textarea>
+        <textarea  class="textarea" placeholder="My Task" readonly>${GetTask.value}</textarea>
         <te >
         </li>
         <span class="li-btn">
-            <button id="taskEditBtn" class="btn green">Edit</button>
-            <button id="taskDelBtn" class="btn red"><i class='bx bxs-message-square-x' ></i>delete task</button>
+            <button  class="btn green taskEditBtn">Edit</button>
+            <button  class="btn red taskDelBtn"><i class='bx bxs-message-square-x' ></i>delete task</button>
         </span>
     </div>`
 task_Ul.insertAdjacentHTML('beforeend',li);
 
-let allLiSelector = document.querySelectorAll('.mian-li')
+let allLiSelector = document.querySelectorAll('.mian-li');
 
 
 allLiSelector.forEach((crr,i)=>{
-   let  taskEditBtn = crr.querySelector('#taskEditBtn'),
-   taskDelBtn = crr.querySelector('#taskDelBtn'),
-   taskNo = crr.querySelector('.taskNo'), 
-   taskInput = crr.querySelector('.task-li textarea') ;
-   
-taskNo.innerHTML = `Task No : ${i+1}`
-taskEditBtn.addEventListener('click',()=>{
-    taskEditBtn.innerHTML === "Edit" ? taskEditBtn.innerHTML = 'Save':taskEditBtn.innerHTML = "Edit"
-taskInput.toggleAttribute('readonly');
-taskInput.focus()
-})
-// del
-
+  let taskEditBtn = crr.querySelector('.taskEditBtn');
+  let  taskDelBtn = crr.querySelector('.taskDelBtn');
+  let  taskNo = crr.querySelector('.taskNo');
+  let  taskInput = crr.querySelector('.textarea') ;
+taskNo.innerHTML = `Task No : ${i+1}`;
+taskEditBtn.onclick = ()=>{
+    taskEditBtn.innerHTML === "Edit" ? taskEditBtn.innerHTML = 'Save':taskEditBtn.innerHTML = "Edit";
+    taskInput.toggleAttribute('readonly');
+    taskInput.focus()
+}
+// delete
 taskDelBtn.addEventListener('click',()=>{
     crr.remove()
-   })
-  
-})
+   })});
         GetTask.value = ''
         errorBox.innerHTML = ''
     }
-
     else{
     errorBox.innerHTML = 'please write the task'
     }
